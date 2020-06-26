@@ -1,0 +1,6 @@
+*.gch
+*.o
+*.so
+*.dll
+docs/output/*
+log
