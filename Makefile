@@ -54,7 +54,7 @@ override CFLAGS += $(OSFLAGS) $(BUILDFLAGS) -fPIC -O2
 
 # cppanim is an alias for src
 .PHONY: cppanim
-cppanim: src
+cppanim: dirs src
 
 debug: CFLAGS += -O0 -g
 debug: cleanso src
@@ -62,6 +62,9 @@ debug: cleanso src
 test: debug
 
 all: $(submodules)
+
+dirs: 
+	$(MKDIRCMD) $(bin_dir)
 
 # Utils are built with the library, hence the dependency
 utils: cppanim

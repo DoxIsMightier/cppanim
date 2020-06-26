@@ -9,7 +9,7 @@ all: dirstruct $(binfiles)
 
 $(binfiles): $(objects)
 	$(CPP) -Wl,-rpath,. -o $@ \
-        $(addprefix $(objdir)/,$(addsuffix .o,$(@F))) -L$(bin_dir) -lcppanim
+        $(addprefix $(objdir)/,$(addsuffix .o,$(@F))) -L$(bin_dir) -lcppanim -lpthread
 
 .PHONY: dirstruct
 dirstruct:
