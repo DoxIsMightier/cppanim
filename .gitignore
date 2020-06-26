@@ -4,3 +4,4 @@
 *.dll
 docs/output/*
 log
+bin/
